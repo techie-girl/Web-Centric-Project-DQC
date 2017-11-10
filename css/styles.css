@@ -22,6 +22,7 @@ body, html {
   border:1px solid black;
   width:100%;
   min-height:60%;
+  min-width:150px;
 }
 
 #side-content {
@@ -68,7 +69,7 @@ hr {
   color:lightgrey;
   background-color:lightgrey;
   height:1px;
-  margin-top: 30px;
+  margin-top: 31px;
   margin-bottom: 40px;
 }
 
@@ -97,7 +98,7 @@ hr {
   height: 40px;
   border-radius: 10px;
   left:68px;
-  top:66px;
+  top:70px;
 }
 
 #block-hour p{
@@ -108,10 +109,10 @@ hr {
 #block-hour-half {
   position:absolute;
   width: 74px;
-  height: 62px;
+  height: 61px;
   border-radius: 10px;
   left:155px;
-  top:148px;
+  top:152px;
 }
 
 #block-hour-half p{
