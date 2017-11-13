@@ -67,14 +67,11 @@ h3 {
   padding-right:20px;
 }
 
-.block-box {
-  background:rgba(255,61,127,0.4);
-  border:1px solid rgb(48,48,48);
-}
-
 .block-box-blue {
   background:rgba(63,184,175,0.4);
   border:1px solid rgb(48,48,48);
+  font-size:12px;
+  
 }
 
 .block-text {
@@ -82,30 +79,26 @@ h3 {
 }
 
 /* POSITIONING WILL HAVE TO BE DEFINED ON LOAD OF BLOCK */
-#block-hour {
+.block-hour {
   position:absolute;
   width: 74px;
   height: 38px;
   border-radius: 10px;
-  left:68px;
-  top:64px;
 }
 
-#block-hour p{
+.block-hour p{
   padding:0;
   margin:0 auto;
 }
 
-#block-hour-half {
+.block-hour-half {
   position:absolute;
   width: 74px;
   height: 55px;
   border-radius: 10px;
-  left:155px;
-  top:138px;
 }
 
-#block-hour-half p{
+.block-hour-half p{
   padding:0;
   margin:0 auto;
 }

@@ -13,12 +13,6 @@
 
 <div id="schedule-container">
 
-
-  <!-- Time Blocks (added via JS in future)-->
-  <div id="block-hour" class="block-box"><p class="block-text">Test</p></div>
-  <div id="block-hour-half" class="block-box-blue"><p class="block-text">Test 2</p></div>
-  <!-- End Time Blocks-->
-
   <div class="time-column" id="time-labels">
 
   	  <!-- Empty, top row, line break -->
@@ -81,11 +75,7 @@
 		<h2> Students </h2>
 		<div id="student-list">
 			<ul>
-				<li> <input type="checkbox" name="student1-schedulecheck" value="STD1Show">Matthew</li>
-				<li> <input type="checkbox" name="student2-schedulecheck" value="STD2Show">Arazoo</li>
-				<li> <input type="checkbox" name="student3-schedulecheck" value="STD3Show">Pat</li>
-				<li> <input type="checkbox" name="student4-schedulecheck" value="STD4Show">Steph</li>
-				<li> <input type="checkbox" name="student5-schedulecheck" value="STD5Show">Hawley</li>
+				<li><input onclick="toggleSchedule(this.parentNode.innerHTML)" type="checkbox" name="student1-schedulecheck" value="STD1Show">Matthew</li>
 			</ul>
 		</div>
 	</div>
