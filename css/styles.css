@@ -44,8 +44,8 @@ body, html {
 }
 
 .time-column p {
-  margin-top:22px;
-  margin-bottom: 22px;
+  margin-top:18px;
+  margin-bottom: 15px;
   margin-right:5px;
   text-align:right;
 }
@@ -69,8 +69,8 @@ hr {
   color:lightgrey;
   background-color:lightgrey;
   height:1px;
-  margin-top: 31px;
-  margin-bottom: 40px;
+  margin-top: 26px;
+  margin-bottom: 35.7px;
 }
 
 #last-tc {
