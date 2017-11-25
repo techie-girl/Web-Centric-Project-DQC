@@ -80,39 +80,224 @@ h3 {
 }
 
 .block-box-blue {
-  background:rgba(63,184,175,0.4);
+  background:rgba(63,184,175,0.7);
   font-size:12px;
   
 }
 
-.block-text {
-  color:rgba(0,0,0,1);
+/* Block Positioning Classes */
+
+/* Part 1 - Length */
+.block-half-hour {
+  position:absolute;
+  width: 54px;
+  height: 20px;
+  border-radius: 5px;
 }
 
-/* POSITIONING WILL HAVE TO BE DEFINED ON LOAD OF BLOCK */
 .block-hour {
   position:absolute;
-  width: 74px;
+  width: 54px;
   height: 37px;
   border-radius: 5px;
 }
 
-.block-hour p{
-  padding:0;
-  margin:0 auto;
-}
-
 .block-hour-half {
   position:absolute;
-  width: 74px;
-  height: 55px;
-  border-radius: 10px;
+  width: 54px;
+  height: 56px;
+  border-radius: 5px;
 }
 
-.block-hour-half p{
-  padding:0;
-  margin:0 auto;
+.block-two-hours {
+  position:absolute;
+  width: 54px;
+  height: 76px;
+  border-radius: 5px;
 }
+
+.block-two-half {
+  position:absolute;
+  width: 54px;
+  height: 96px;
+  border-radius: 5px;
+}
+
+.block-three-hours {
+  position:absolute;
+  width: 54px;
+  height: 116px;
+  border-radius: 5px;
+}
+
+.block-three-half {
+  position:absolute;
+  width: 54px;
+  height: 136px;
+  border-radius: 5px;
+}
+
+.block-four-hours {
+  position:absolute;
+  width: 54px;
+  height: 154px;
+  border-radius: 2px;
+}
+
+/* Part 2 - Day */
+
+.monday {
+	left:69px;
+}
+
+.tuesday {
+	left:167px;
+}
+
+.wednesday {
+	left:273px;
+}
+
+.thursday {
+	left:377px;
+}
+
+.friday {
+	left:469px;
+}
+
+/* Part 3 - Time */
+
+.eight {
+	top:76px;
+}
+
+.eightthirty {
+	top:93px;
+}
+
+.nine {
+	top:114px;
+}
+
+.ninethirty {
+	top:132px;
+}
+
+.ten {
+	top:152px;
+}
+
+.tenthirty {
+	top:171px;
+}
+
+.eleven {
+	top:190px;
+}
+
+.eleventhirty {
+	top:209px;
+}
+
+.twelve {
+	top:228px;
+}
+
+.twelvethirty {
+	top:247px;
+}
+
+.thirteen {
+	top:267px;
+}
+
+.thirteenthirty {
+	top:286px;
+}
+
+.fourteen {
+	top:306px;
+}
+
+.fourteenthirty {
+	top:324px;
+}
+
+.fifteen {
+	top:343px;
+}
+
+.fifteenthirty {
+	top:362px;
+}
+
+.sixteen {
+	top:382px;
+}
+
+.sixteenthirty {
+	top:401px;
+}
+
+.seventeen {
+	top:421px;
+}
+
+.seventeenthirty {
+	top:339px;
+}
+
+.eightteen {
+	top:457px;
+}
+
+.eightteenthirty {
+	top:477px;
+}
+
+.ninteen {
+	top:496px;
+}
+
+.ninteenthirty {
+	top:515px;
+}
+
+.twenty {
+	top:535px;
+}
+
+.twentythirty {
+	top:553px;
+}
+
+.twentyone {
+	top:574px;
+}
+
+.twentyonethirty {
+	top:591px;
+}
+
+.twentytwo {
+	top:610px;
+}
+
+.twentytwothirty {
+	top:630px;
+}
+
+.twentythree {
+	top:649px;
+}
+
+.twentythreethirty {
+	top:669px;
+}
+
+
+/* Student Name List */
 
 ul {
   list-style-type:none;
