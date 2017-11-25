@@ -5,12 +5,21 @@ body, html {
 
 #schedule-container {
   width:540px;
-  min-height:680px;
-  max-height:680px;
+  min-height:60%;
   margin:0 auto;
   text-align:center;
   float:left;
   position:relative;
+}
+
+hr {
+	position:absolute;
+	width:436px;
+	color: lightgrey;
+	background-color: lightgrey;
+	height: 0.9px;
+	border:0px;
+	left:72px;
 }
 
 #students-container {
@@ -40,12 +49,14 @@ body, html {
 .time-column {
   width:200px;
   display:table-cell;
-  height:600px;
+  height:30px;
   margin:0 auto;
+  position:relative;
+  left:17px;
 }
 
 .time-column p {
-  margin-top:15px;
+  margin-top:18px;
   margin-bottom: 15px;
   margin-right:5px;
   text-align:right;
@@ -82,7 +93,7 @@ h3 {
 .block-hour {
   position:absolute;
   width: 74px;
-  height: 36px;
+  height: 37px;
   border-radius: 5px;
 }
 

@@ -45,7 +45,7 @@ function drawBlock(student) {
 		newEl.classList.add('block-hour');
 		newEl.classList.add('block-box-blue');
 
-		newEl.style.top = "531px";
+		newEl.style.top = "574px";
 		newEl.style.left = "70px";
 		newEl.style.visibility = "hidden";
 }
