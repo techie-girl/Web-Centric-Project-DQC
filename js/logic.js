@@ -1,7 +1,7 @@
 /* List of Students */
 var studentList = [];
 
-var schedulesDisplayed = 1;
+var schedulesDisplayed = 0;
 
 /* Test Students */
 var testStudent1 = {
@@ -54,29 +54,29 @@ function toggleSchedule(name) {
 			newEl.classList.remove('block-box-red');
 			newEl.classList.remove('block-box-green');
 
-			switch(schedulesDisplayed) {
-				case 1:
+			switch(schedulesDisplayed % 8) {
+				case 0:
 					newEl.classList.add('block-box-blue');
 					break;
-				case 2:
+				case 1:
 					newEl.classList.add('block-box-pink');
 					break;
-				case 3:
+				case 2:
 					newEl.classList.add('block-box-amber');
 					break;
-				case 4:
+				case 3:
 					newEl.classList.add('block-box-black');
 					break;
-				case 5:
+				case 4:
 					newEl.classList.add('block-box-purple');
 					break;
-				case 6:
+				case 5:
 					newEl.classList.add('block-box-brown');
 					break;
-				case 7:
+				case 6:
 					newEl.classList.add('block-box-red');
 					break;
-				case 8:
+				case 7:
 					newEl.classList.add('block-box-green');
 					break;
 				default:
@@ -91,8 +91,6 @@ function toggleSchedule(name) {
 
 	if (displayingSched) 
 			schedulesDisplayed++;
-	else 
-		schedulesDisplayed--;
 }
 
 /* Draw all schedule blocks from a student object */

@@ -77,6 +77,8 @@ h3 {
 
 #last-tc {
   padding-right:20px;
+  position:relative;
+  left:16px;
 }
 
 .block-box-blue {
@@ -96,7 +98,7 @@ h3 {
 }
 
 .block-box-amber {
-  background:rgba(255,160,0.4);
+  background:rgba(255,160,0,0.4);
 }
 
 .block-box-green {
