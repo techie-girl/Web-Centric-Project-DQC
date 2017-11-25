@@ -14,9 +14,80 @@ body, html {
 
 hr {
 	position:absolute;
-	width:435px;
+	width:436px;
+	color: lightgrey;
+	background-color: lightgrey;
+	height: 0.9px;
+	border:0px;
 	left:72px;
-	top:56px;
+}
+
+#eightline {
+	top:57px;
+}
+
+#nineline {
+	top:93px;
+}
+
+#tenline {
+	top:129px;
+}
+
+#elevenline {
+	top:167px;
+}
+
+#twelveline {
+	top:203px;
+}
+
+#thirteenline {
+	top:240px;
+}
+
+#fourteenline {
+	top:277px;
+}
+
+#fifteenline {
+	top:312px;
+}
+
+#sixteenline {
+	top:349px;
+}
+
+#seventeenline {
+	top:386px;
+}
+
+#eightteenline {
+	top:422px;
+}
+
+#nineteenline {
+	top:459px;
+}
+
+#twentyline {
+	top:495px;
+}
+
+#twentyoneline {
+	top:532px;
+}
+
+#twentytwoline {
+	top:567px;
+}
+
+#twentythreeline {
+	top:604px;
+}
+
+#twentyfourline {
+	top:641px;
 }
 
 #students-container {
