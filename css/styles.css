@@ -52,7 +52,7 @@ hr {
   height:30px;
   margin:0 auto;
   position:relative;
-  left:17px;
+  left:13px;
 }
 
 .time-column p {
@@ -80,9 +80,35 @@ h3 {
 }
 
 .block-box-blue {
-  background:rgba(63,184,175,0.7);
-  font-size:12px;
-  
+  background:rgba(25,118,210,0.4);
+}
+
+.block-box-pink {
+  background:rgba(255,64,129,0.4);
+}
+
+.block-box-purple {
+  background:rgba(123,31,162,0.4);
+}
+
+.block-box-black {
+  background:rgba(33,33,33,0.4);
+}
+
+.block-box-amber {
+  background:rgba(255,160,0.4);
+}
+
+.block-box-green {
+  background:rgba(76,175,80,0.4);
+}
+
+.block-box-red {
+  background:rgba(211,47,47,0.4);
+}
+
+.block-box-brown {
+  background:rgba(121,85,72,0.4);
 }
 
 /* Block Positioning Classes */
@@ -151,15 +177,15 @@ h3 {
 }
 
 .tuesday {
-	left:167px;
+	left:163px;
 }
 
 .wednesday {
-	left:273px;
+	left:267px;
 }
 
 .thursday {
-	left:377px;
+	left:372px;
 }
 
 .friday {
@@ -173,7 +199,7 @@ h3 {
 }
 
 .eightthirty {
-	top:93px;
+	top:92px;
 }
 
 .nine {
@@ -221,7 +247,7 @@ h3 {
 }
 
 .fourteenthirty {
-	top:324px;
+	top:325px;
 }
 
 .fifteen {
@@ -245,7 +271,7 @@ h3 {
 }
 
 .seventeenthirty {
-	top:339px;
+	top:439px;
 }
 
 .eightteen {
