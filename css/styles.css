@@ -12,84 +12,6 @@ body, html {
   position:relative;
 }
 
-hr {
-	position:absolute;
-	width:436px;
-	color: lightgrey;
-	background-color: lightgrey;
-	height: 0.9px;
-	border:0px;
-	left:72px;
-}
-
-#eightline {
-	top:57px;
-}
-
-#nineline {
-	top:93px;
-}
-
-#tenline {
-	top:129px;
-}
-
-#elevenline {
-	top:167px;
-}
-
-#twelveline {
-	top:203px;
-}
-
-#thirteenline {
-	top:240px;
-}
-
-#fourteenline {
-	top:277px;
-}
-
-#fifteenline {
-	top:312px;
-}
-
-#sixteenline {
-	top:349px;
-}
-
-#seventeenline {
-	top:386px;
-}
-
-#eightteenline {
-	top:422px;
-}
-
-#nineteenline {
-	top:459px;
-}
-
-#twentyline {
-	top:495px;
-}
-
-#twentyoneline {
-	top:532px;
-}
-
-#twentytwoline {
-	top:567px;
-}
-
-#twentythreeline {
-	top:604px;
-}
-
-#twentyfourline {
-	top:641px;
-}
-
 #students-container {
   width:40%;
   height:100%;
@@ -147,7 +69,6 @@ h3 {
 
 .block-box-blue {
   background:rgba(63,184,175,0.4);
-  border:1px solid rgb(48,48,48);
   font-size:12px;
   
 }
@@ -161,7 +82,7 @@ h3 {
   position:absolute;
   width: 74px;
   height: 38px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .block-hour p{
