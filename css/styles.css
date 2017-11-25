@@ -12,6 +12,13 @@ body, html {
   position:relative;
 }
 
+hr {
+	position:absolute;
+	width:435px;
+	left:72px;
+	top:56px;
+}
+
 #students-container {
   width:40%;
   height:100%;
