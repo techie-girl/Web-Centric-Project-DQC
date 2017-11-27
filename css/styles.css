@@ -12,16 +12,6 @@ body, html {
   position:relative;
 }
 
-hr {
-	position:absolute;
-	width:436px;
-	color: lightgrey;
-	background-color: lightgrey;
-	height: 0.9px;
-	border:0px;
-	left:72px;
-}
-
 #students-container {
   width:40%;
   height:100%;
@@ -52,14 +42,7 @@ hr {
   height:30px;
   margin:0 auto;
   position:relative;
-  left:13px;
-}
-
-.time-column p {
-  margin-top:18px;
-  margin-bottom: 15px;
-  margin-right:5px;
-  text-align:right;
+  left:41px;
 }
 
 table {
@@ -78,7 +61,7 @@ h3 {
 #last-tc {
   padding-right:20px;
   position:relative;
-  left:16px;
+  left:31px;
 }
 
 .block-box-blue {
@@ -112,6 +95,35 @@ h3 {
 .block-box-brown {
   background:rgba(121,85,72,0.4);
 }
+
+.block-box-deep-purple {
+  background:rgba(81,45,168,0.4);
+}
+
+.block-box-yellow {
+  background:rgba(255,235,59,0.4);
+}
+
+.block-box-blue-grey {
+  background:rgba(96,125,139,0.4);
+}
+
+.block-box-indigo {
+  background:rgba(83,109,254,0.4);
+}
+
+.block-box-cyan {
+  background:rgba(0,151,167,0.4);
+}
+
+.block-box-teal {
+  background:rgba(0,150,136,0.4);
+}
+
+.block-box-lime {
+  background:rgba(205,220,57,0.4);
+}
+
 
 /* Block Positioning Classes */
 

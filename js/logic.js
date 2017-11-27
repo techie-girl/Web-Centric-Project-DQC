@@ -1,7 +1,11 @@
 /* List of Students */
 var studentList = [];
+var zIndexCounter = 99998;
+/* List of Available Colours, so that no two colours are on the schedule at the same time */
+var colorsOccupied = [false, false, false, false, false, false, false, false];
 
-var schedulesDisplayed = 0;
+/* Counter of schedules */
+var scheduleCounter = 0;
 
 /* Test Students */
 var testStudent1 = {
@@ -32,74 +36,195 @@ function populateSchedule () {
 }
 
 function toggleSchedule(name) {
+
+	/* Get ID of Schedule Blocks and Initialize Objects */
 	var clickedName = name.replace(/\n|<.*?>/g,'');
 	var reducedName = clickedName.replace(/\s/g, '');
 	var counter = 0;
 	var displayingSched = false;
+	var firstElement = true;
 
+	/* If No More Colors, Too Many Schedules, Return w/ Error */
+	if (scheduleCounter == 8) {
+		alert("Cannot fit any more schedules!");
+		return;
+	}
+
+	/* Pull a Random Number to Choose Colour */
+	var randColor = Math.floor(Math.random() * 8);
+
+	while (colorsOccupied[randColor]) {
+		var randColor = Math.floor(Math.random() * 8);
+	}
+		
+	/* Place Colour on All Schedule Blocks And Make Visible */
 	while(document.getElementById(reducedName + counter) != null) {
-		if (document.getElementById(reducedName + counter).style.opacity === '0') {
-			document.getElementById(reducedName + counter).style.opacity = "100";
+		if (document.getElementById(reducedName + counter).style.visibility === 'hidden') {
+			document.getElementById(reducedName + counter).style.visibility = "visible";
+
+			var newEl = document.getElementById(reducedName + counter);
 
 			displayingSched = true;
 
-			newEl = document.getElementById(reducedName + counter)
-
-			newEl.classList.remove('block-box-blue');
-			newEl.classList.remove('block-box-pink');
-			newEl.classList.remove('block-box-amber');
-			newEl.classList.remove('block-box-black');
-			newEl.classList.remove('block-box-purple');
-			newEl.classList.remove('block-box-brown');
-			newEl.classList.remove('block-box-red');
-			newEl.classList.remove('block-box-green');
-
-			switch(schedulesDisplayed % 8) {
+			switch(randColor) {
 				case 0:
 					newEl.classList.add('block-box-blue');
+					if (firstElement) {
+						colorsOccupied[0] = true;
+						var el =  document.createElement("li");
+						el.innerHTML = "<span style='color:rgb(25,118,210)'>&#9632 </span>" + clickedName;
+						el.id = reducedName + 'listed';
+						document.getElementById("current-student-list").appendChild(el);
+						firstElement = false;
+					}
 					break;
 				case 1:
 					newEl.classList.add('block-box-pink');
+					if (firstElement) {
+						colorsOccupied[1] = true;
+						var el =  document.createElement("li");
+						el.innerHTML = "<span style='color:rgb(255,64,129)'>&#9632 </span>" + clickedName;
+						el.id = reducedName + 'listed';
+						document.getElementById("current-student-list").appendChild(el);
+						firstElement = false;
+					}
 					break;
 				case 2:
 					newEl.classList.add('block-box-amber');
+					if (firstElement) {
+						colorsOccupied[2] = true;
+						var el =  document.createElement("li");
+						el.innerHTML = "<span style='color:rgb(255,160,0)'>&#9632 </span>" + clickedName;
+						el.id = reducedName + 'listed';
+						document.getElementById("current-student-list").appendChild(el);
+						firstElement = false;
+					}
 					break;
 				case 3:
 					newEl.classList.add('block-box-black');
+					if (firstElement) {
+						colorsOccupied[3] = true;
+						var el =  document.createElement("li");
+						el.innerHTML = "<span style='color:rgb(33,33,33)'>&#9632 </span>" + clickedName;
+						el.id = reducedName + 'listed';
+						document.getElementById("current-student-list").appendChild(el);
+						firstElement = false;
+					}
 					break;
 				case 4:
 					newEl.classList.add('block-box-purple');
+					if (firstElement) {
+						colorsOccupied[4] = true;
+						var el =  document.createElement("li");
+						el.innerHTML = "<span style='color:rgb(123,31,162)'>&#9632 </span>" + clickedName;
+						el.id = reducedName + 'listed';
+						document.getElementById("current-student-list").appendChild(el);
+						firstElement = false;
+					}
 					break;
 				case 5:
 					newEl.classList.add('block-box-brown');
+					if (firstElement) {
+						colorsOccupied[5] = true;
+						var el =  document.createElement("li");
+						el.innerHTML = "<span style='color:rgb(121,85,72)'>&#9632 </span>" + clickedName;
+						el.id = reducedName + 'listed';
+						document.getElementById("current-student-list").appendChild(el);
+						firstElement = false;
+					}
 					break;
 				case 6:
 					newEl.classList.add('block-box-red');
+					if (firstElement) {
+						colorsOccupied[6] = true;
+						var el =  document.createElement("li");
+						el.innerHTML = "<span style='color:rgb(211,47,47)'>&#9632 </span>" + clickedName;
+						el.id = reducedName + 'listed';
+						document.getElementById("current-student-list").appendChild(el);
+						firstElement = false;
+					}
 					break;
 				case 7:
 					newEl.classList.add('block-box-green');
+					if (firstElement) {
+						colorsOccupied[7] = true;
+						var el =  document.createElement("li");
+						el.innerHTML = "<span style='color:rgb(76,175,80)'>&#9632 </span>" + clickedName;
+						el.id = reducedName + 'listed';
+						document.getElementById("current-student-list").appendChild(el);
+						firstElement = false;
+					}
 					break;
 				default:
-					console.log("Error: Too many schedules displayed.");
+					console.log("Error: Schedule cannot be displayed");
 			}
 		}
 		else {
-			document.getElementById(reducedName + counter).style.opacity = "0";
+			var elementWithColor = document.getElementById(reducedName + counter);
+			var currentColor = elementWithColor.classList.item(3);
+
+			switch (currentColor) {
+				case 'block-box-blue':
+					colorsOccupied[0] = false;
+					break;
+				case 'block-box-pink':
+					colorsOccupied[1] = false;
+					break;
+				case 'block-box-amber':
+					colorsOccupied[2] = false;
+					break;
+				case 'block-box-black':
+					colorsOccupied[3] = false;
+					break;
+				case 'block-box-purple':
+					colorsOccupied[4] = false;
+					break;
+				case 'block-box-brown':
+					colorsOccupied[5] = false;
+					break;
+				case 'block-box-red':
+					colorsOccupied[6] = false;
+					break;
+				case 'block-box-green':
+					colorsOccupied[7] = false;
+					break;
+			}
+
+			elementWithColor.classList.remove(currentColor);
+
+			if (firstElement) {
+				/* Remove From Listed Names over Schedule View*/
+				var element = document.getElementById(reducedName + 'listed');
+				element.parentNode.removeChild(element);
+				firstElement = false;
+			}
+
+			document.getElementById(reducedName + counter).style.visibility = "hidden";
 		}
 		counter++;
 	}
 
+	/* Keep a Count of Schedule Counter */
 	if (displayingSched) 
-			schedulesDisplayed++;
+		scheduleCounter++;
+	else
+		scheduleCounter--;
 }
 
 /* Draw all schedule blocks from a student object */
 function drawBlocks(student) {
-
 	for (var i = 0; i < student.scheduleBlockList.length; i++) {
 		var name = student.name.replace(/\s/g, '');
 		var el =  document.createElement("div");
+		
+		var mouseoveratt = "Student: " + student.name + "\n" +
+		                   "Class Name: " + student.scheduleBlockList[i].name + "\n" +
+		                   "Class ID: " + student.scheduleBlockList[i].id + "\n" +
+		                   "Location: " + student.scheduleBlockList[i].location;
+		el.setAttribute("title", mouseoveratt);
+
 		el.id = name + student.b00 + student.blockCounter;
+
 		document.getElementById("schedule-container").appendChild(el);
 
 		var newEl = document.getElementById(name + student.b00 + student.blockCounter);
@@ -271,7 +396,7 @@ function drawBlocks(student) {
 				console.log("Error, unable to properly draw block.");
 		}
 
-		newEl.style.opacity = "0";
+		newEl.style.visibility = "hidden";
 	}
 }
 
