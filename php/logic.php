@@ -3,7 +3,8 @@
 ?>
 /* List of Students */
 var studentList = [];
-var zIndexCounter = 99998;
+var studentCounter = 0;
+
 /* List of Available Colours, so that no two colours are on the schedule at the same time */
 var colorsOccupied = [false, false, false, false, false, false, false, false];
 
@@ -216,6 +217,13 @@ function toggleSchedule(name) {
 
 /* Draw all schedule blocks from a student object */
 function drawBlocks(student) {
+
+	/* Add their name to the student list */
+	var listEl =  document.createElement("li");
+	listEl.innerHTML = "<input onclick='toggleSchedule(this.parentNode.innerHTML)' type='checkbox' name='student" + studentCounter + "-schedulecheck' value='STD" + studentCounter + "Show'>" + student.name + " " + student.b00;
+	document.getElementById("students-ul").appendChild(listEl);
+	studentCounter++;
+
 	for (var i = 0; i < student.scheduleBlockList.length; i++) {
 		var name = student.name.replace(/\s/g, '');
 		var el =  document.createElement("div");
