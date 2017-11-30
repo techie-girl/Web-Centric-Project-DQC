@@ -6,7 +6,7 @@ require_once('login.php');
 // try to connect to the database
 try {
 	//if all goes well, assign the returned value to $pdo
-	$pdo = new PDO('mysql:host=localhost; dbname=hoseyni', $user, $pswd);
+	$pdo = new PDO('mysql:host=db.cs.dal.ca; dbname=crysdale', $user, $pswd);
 	//configuring the PDO error mode to catch exceptions
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$pdo->exec('SET NAMES "utf8"');
@@ -23,6 +23,6 @@ catch (PDOException $e)
 	exit();
 }
 
-echo '<p class="successMSG">Successfully connected to the database</p>';
+//echo '<p class="successMSG">Successfully connected to the database</p>';
 
 ?>

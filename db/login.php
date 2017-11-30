@@ -1,8 +1,8 @@
 <?php
 
 // Import the login credentials
-$user = hoseyni;
-$pswd = B;
+$user = crysdale;
+$pswd = B00701390;
 
 
 ?>
