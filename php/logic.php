@@ -1,7 +1,10 @@
 <?php
-	include(dbConnect.php);
+	//include("db/dbconnection.php");
+	$mysql = mysqli_connect("db.cs.dal.ca","crysdale","B00701390","crysdale");
 	$query=mysqli_query($mysql, "SELECT Students.name, Students.B00, Courses.course_code, Courses.course_name, Courses.location, Courses.startTime, Courses.endTime, Courses.days FROM (Courses, Students) INNER JOIN enrollment ON Courses.course_code=enrollment.course_code");
+	echo (mysqli_error($query));
 	$result = mysqli_fetch_row($query);
+	echo $result[0];
 ?>
 /* List of Students */
 var studentList = [];

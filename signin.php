@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <body>
   <div id="wrapper">
 	<header class="header">
-		<h2>Welcome to Dalonline Mock</h2>
+		<h2>Dal Quick Collab&nbsp;</h2>
 	</header>
 	    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="signin">
 	    	<label for="Net id">

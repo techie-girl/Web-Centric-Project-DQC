@@ -6,7 +6,7 @@
 <html>
 <head>
   <!-- JavaScript -->
-  <script src="js/logic.js"></script>
+  <script src="php//logic.php"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
