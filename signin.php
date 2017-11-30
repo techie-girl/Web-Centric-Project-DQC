@@ -112,7 +112,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	    </form>
 	  </div>
   </body>
-  <footer>
-  <p>2017 All Rights Reserved &copy; Dalhousie University Mock</p>
-  </footer>
+
+  <?php include('footer.php');
 </html>
