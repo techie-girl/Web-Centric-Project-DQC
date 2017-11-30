@@ -1,5 +1,7 @@
 <?php
 	include(dbConnect.php);
+	$query=mysqli_query($mysql, "SELECT Students.name, Students.B00, Courses.course_code, Courses.course_name, Courses.location, Courses.startTime, Courses.endTime, Courses.days FROM (Courses, Students) INNER JOIN enrollment ON Courses.course_code=enrollment.course_code");
+	$result = mysqli_fetch_row($query);
 ?>
 /* List of Students */
 var studentList = [];
@@ -11,20 +13,17 @@ var colorsOccupied = [false, false, false, false, false, false, false, false];
 /* Counter of schedules */
 var scheduleCounter = 0;
 
-/* Test Students */
-var testStudent1 = {
-	name: 'Matthew Duggan',
-	blockCounter: 0,
-	scheduleBlockList: [],
-	b00: 'B00617196'
+/* Students */
+<?php for($i=0;$i<=mysqli_num_rows($query);$i++){?>
+var testStudent<?php echo($i) ?> = {
+		name: <?php echo $result[0] ?>,
+		blockCounter: 0,
+		scheduleBlockList: [],
+		b00: <?php echo $result[1]; 
+		$result = mysqli_fetch_row($query);
+	}
+	?>
 };
-
-var testStudent2 = {
-	name: 'Hawley Jean',
-	blockCounter: 0,
-	scheduleBlockList: [],
-	b00: 'B00626007'
-}
 
 /* On load */
 window.onload = populateSchedule;
