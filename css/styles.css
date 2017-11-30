@@ -1,8 +1,124 @@
+/*BODY*/
 body, html {
-  height:100%;
-  font-family: "Trebuchet MS";
+  width:100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+  line-height: 1.6; 
+  font-weight: 300;
+  background: white;
+}
+/* --------------------------------------------------------------
+LAYOUT
+-------------------------------------------------------------- */
+
+footer {
+    border-top: 1px solid #FCF4D9;
+    margin: 2em auto;
+    padding: 20;
+    height: 10%;
+    text-align: center;
+    background: black;
+    color: #DAA520;
+  }
+ #userLogin, #userPass {
+  clear: both;
+  float: left;
+  width: 40%;
+  color: #555;
+  font-size: 0.85em;
+  padding: 0.8em;
+  margin: 20 30 20 30;
+  border: solid #edf1f1 thick;
+ }
+ #login input{
+   clear: both;
+   position: relative;
+   margin: 20 30 20 30; 
+   background: #DAA520;
+   color: black;
+   cursor: pointer;
+   padding: 0.7em;
+   display: block;
+   border-radius: 4px;
+   font-size: 1em;
 }
 
+/*--------------------------------------------------------------------
+
+----------------------------------------------------------------------*/
+/*---------------------
+DESKTOP
+-----------------------------*/
+
+@media all and (min-width: 960px) {
+#wrapper { margin:0 width: 960px; }
+div.clear {clear:both;}
+
+.header { 
+  position: relative; 
+  text-align: center;
+  color: #DAA520;
+  text-shadow: 1px 1px 2px #222;
+  font-size: 3em;
+  background: url('../images/dalhousieuni.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  border-bottom: 1px solid #f0f0f0; 
+  width: 100%; 
+  height: 35%;
+  padding: 10px 0; 
+}
+
+}
+/*---------------------
+TABLET
+-----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+/* WRAPPERS */
+#wrapper { margin:0 width: 768px; }
+
+.header { 
+  position: relative; 
+  text-align: center;
+  color: #DAA520;
+  text-shadow: 1px 1px 2px #222;
+  font-size: 2.3em;
+  background: url('../images/dalhousieuni.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  border-bottom: 1px solid #f0f0f0; 
+  width: 100%; 
+  height: 35%;
+  padding: 10px 0; 
+}
+}
+/*---------------------
+PHONE
+-----------------------------*/
+@media all and (min-width: 320px) and (max-width: 767px) {
+/* WRAPPERS */
+#wrapper { margin:0 width: 320px; }
+div.clear {clear:both;}
+
+.header { 
+  position: relative; 
+  text-align: center;
+  color: #DAA520;
+  text-shadow: 1px 1px 2px #222;
+  font-size: 2em;
+  background: url('../images/dalhousieuni.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  border-bottom: 1px solid #f0f0f0; 
+  width: 100%; 
+  height: 35%;
+  padding: 10px 0; 
+}
+}
+/*---------------------------------------------------
+-----------------------------------------------------*/
 #schedule-container {
   width:540px;
   min-height:60%;
@@ -341,77 +457,4 @@ h3 {
 
 ul {
   list-style-type:none;
-}
-
-#banner {
-  background-color: #006CA1;
-  width: 100%;
-  height: 45px;
-}
-
-#banner img {
-  float: left;
-  padding-left: 50px;
-}
-
-#banner h1 {
-  font-family: 'Oswald', sans-serif;
-  margin: 0;
-  display: block;
-  color: #FFF;
-  padding-left: 7.5em;
-}
-
-nav {
-  float: right;
-  padding-right: 1em;
-  font-size: .75em;
-}
-
-nav ul li {
-  display: inline;
-}
-
-#sec a:link {
-  text-decoration: none;
-  color: #336699;
-}
-
-#sec a:visited {
-  color: #336699;
-}
-
-#sec a:hover {
-  text-decoration: underline;
-}
-
-#sched {
-  margin-left: 245px;
-  margin-top: 2em;
-}
-
-#main {
-  float: left; 
-  width: 100%;
-  font-size: 1.3em;
-  background-color: #C88D00;
-  margin-bottom: 20px;
-}
-
-#main a:link {
-  padding: 21px 5px;
-  color: #FFF;
-  text-decoration: none;
-}
-
-#main a:visited {
-  color: #FFF;
-}
-
-#main a:hover {
-  background-color: #000;
-}
-
-#main a:active {
-  background-color: #000;
 }
